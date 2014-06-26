@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/css/custom.css" rel="stylesheet" />
+    @RenderSection("css", false)
+
+</head>
+<body>
+    <header class="navbar navbar-inverse navbar-fixed-top title" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand" style="color: #fff; font-weight: 500;">
+                    Easy PIM - 极简主义个人信息管理
+                </a>
+            </div>
+            <nav id="navigation" class="collapse navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li style="padding-left: 80px;"><a href="/task" class="btn btn-custom">任务</a></li>
+                    <li><a href="/note" class="btn btn-custom">记事</a></li>
+                    <li><a href="/file" class="btn btn-custom">文件</a></li>
+                    <li><a href="/image" class="btn btn-custom">照片</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container" style="margin-top: 60px;">
+        <div class="row" style="border: 1px solid transparent;">
+            
+                @RenderBody()
+            
+        </div>
+        <hr />
+        <div class="col-lg-12">
+            <p style="text-align: center; color: #999;">
+                <a href="#">Steven</a> Copyright 2014.
+            </p>
+        </div>
+    </div>
+
+    <script src="~/Content/js/jquery-1.8.2.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/avalon/avalon.min.js"></script>
+    @RenderSection("script", false)
+</body>
+</html>
